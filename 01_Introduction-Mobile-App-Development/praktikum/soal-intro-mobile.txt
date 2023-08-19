@@ -1,0 +1,45 @@
+Soal Prioritas 1
+Tuliskan 5 bahasa pemrograman untuk membuat aplikasi Mobile(contoh: C# untuk Desktop Windows)
+Jawab:
+Lima bahasa pemrograman yang digunakan untuk membuat aplikasi mobile di antaranya:
+- Java, umumnya digunakan untuk mengembangkan aplikasi berbasis Android
+- Swift, digunakan untuk mengembangkan aplikasi mobile berbasis iOS menggantikan objective-c yang sudah lawas dan kurang efisien
+- Kotlin, alternatif bahasa pemrograman yang bisa digunakan untuk pengembangan aplikasi berbasis Android
+- Objective-C, merupakan bahasa pemrograman yang digunakan untuk mengembangkan aplikasi berbasis iOS pada sebelum digantikan oleh objective-c
+- Dart, merupakan bahasa pemrograman yang digunakan dalam kerangka kerja Flutter untuk pengembangan aplikasi mobile lintas platform.
+
+Cari dan tuliskan 5 aplikasi yang berjalan pada sistem operasi Android namun tidak pada sistem operasi iOS
+Jawab:
+Contoh dari lima aplikasi yang berjalan di Android tapi tidak di iOS
+- Tasker, merupakan aplikasi yang bisa digunakan untuk mengotomasi proses yang ada pada sistem aplikasi android, seperti mematikan email saat masuk rumah berdasarkan lokasi dan juga waktu dan lain sebagainya.
+- Nova launcher, merupakan aplikasi launcher yang bisa digunakan untuk memodifikasi tampilan android. Mulai dari mengubah widget, halaman utama, dan ikon aplikasi.
+- Emulator, merupakan jenis aplikasi yang bisa mengemulator dari hardware-hardware terdahulu seperti konsol gamecube dan juga wii pada perangkat android
+- Parallel space, merupakan aplikasi yang digunakan untuk menduplikasi aplikasi lainnya pada android, sehingga bisa menggunakan dua aplikasi yang sama secara bersamaan.
+- Android auto, merupakan platform yang dikembangkan oleh Google yang dirancang khusus untuk menyediakan pengalaman yang lebih aman dan terfokus saat menggunakan aplikasi di dalam mobil (infotainment system)
+
+Soal Prioritas 2
+Cari dan tuliskan 5 aplikasi yang berjalan pada sistem operasi IOS namun tidak pada sistem operasi Android.
+Jawab:
+Lima aplikasi iOS yang tidak berjalan pada Android
+- Procreate, merupakan aplikasi desain dan dan melukis yang umum digunakan para kalangan profesional untuk bekerja pada bidang kreatif/ artistik grafis.
+- Goodnotes, merupakan aplikasi iOS untuk mencatat dan juga mengedit dokumen secara langsung, umumnya digunakan para pelajar untuk mencatat di dalam kelas.
+- Affinity designer, merupakan aplikasi desain/ gambar untuk membuat konten desain grafis seperti ikon, poster dan lain sebagainya.
+- Clips, merupakan aplikasi pembuatan video pendek yang dikembangkan oleh Apple untuk iOS
+- GarageBand, merupakan aplikasi musik dan produksi audio yang hanya tersedia untuk perangkat iOS
+
+Cari 2 buah software yang dapat berjalan pada platform website dan juga Desktop!
+Jawab:
+Dua buah software yang berjalan pada desktop dan juga website di antaranya.
+- WhatsApp dan Telegram, Aplikasi messenger populer berikut bisa dijalankan melalui aplikasi desktopnya sendiri ataupun melalui browser dengan aplikasi webnya yaitu whatsapp web dan telegram web.
+- Microsoft office, merupakan suite perangkat lunak produktivitas yang dapat diakses melalui aplikasi desktop (Windows, macOS) dan juga melalui Office Online, yang dapat diakses melalui browser web seperti office 365.
+
+Soal Eksplorasi
+Perbedaan antara Pengembangan Aplikasi Mobile secara Hybrid dan Native
+Jawab:
+Contoh framework pengembangan aplikasi secara hybrid adalah flutter yang menggunakan bahasa pemrograman dart. Sedangkan pengembangan aplikasi native yang umum digunakan adalah Kotlin dengan java. Pada pengembangan aplikasi hybrid umumnya aplikasi bersifat multi-platform atau dapat digunakan pada berbagai platform seperti pada iOS, Android, Website dan Desktop, berbeda dengan native yang umumnya hanya bisa digunakan untuk satu platform saja.
+Performa yang ditawarkan aplikasi native umumnya lebih bagus dibandingkan aplikasi yang dikembangkan secara hybrid karena bisa mengakses langsung ke API dan menggunakan komponen asli platform yang digunakan. Pengembangan aplikasi secara hybrid umumnya lebih cepat dilakukan karena tidak membutuhkan tambahan program untuk tiap platformnya, berbeda dengan native yang harus dikembangkan dari awal lagi untuk tiap platformnya.
+
+Contoh Kasus yang Tepat untuk Pengembangan Aplikasi Mobile secara Hybrid
+Jawab:
+Aplikasi berita skala kecil
+Penerapan pengembangan aplikasi secara hybrid dapat dilakukan untuk aplikasi berita skala kecil seperti untuk mading komunitas kampus dan lain sebagainya yang memiliki skala kecil. Penggunaan metode hybrid dapat menghemat waktu, upaya dan biaya dengan menulis kode sumber yang sama untuk kedua platform. Selain itu, pembaruan dan perbaikan dapat diimplementasikan dengan cepat di seluruh platform karena tidak perlu mengelola dua kode sumber yang berbeda.
