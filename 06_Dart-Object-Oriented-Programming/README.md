@@ -9,23 +9,26 @@
 
     Class adalah kerangka dasar dalam Dart yang digunakan untuk membuat objek. Class adalah blueprint atau cetak biru yang mendefinisikan struktur dan perilaku objek. Misalnya, jika kita ingin membuat sebuah class untuk merepresentasikan mobil, kita dapat mendefinisikan atribut seperti "warna" dan "kecepatan" dalam class tersebut. Contoh kode Dart untuk class "Mobil" bisa seperti ini:
 
+    ```
     class Mobil {
         String warna;
         int kecepatan;
 
-    // Constructor untuk class Mobil
+        // Constructor untuk class Mobil
         Mobil(this.warna, this.kecepatan);
 
-    // Metode untuk mengganti kecepatan mobil
+        // Metode untuk mengganti kecepatan mobil
         void ubahKecepatan(int newKecepatan) {
             kecepatan = newKecepatan;
         }
     }
+    ```
 
 3. Method
 
     Method dalam Dart adalah fungsi-fungsi yang terkait dengan suatu class dan digunakan untuk melakukan operasi tertentu pada objek dari class tersebut. Dalam contoh di atas, ubahKecepatan adalah sebuah method yang digunakan untuk mengubah kecepatan mobil. Dengan menggunakan objek dari class "Mobil," kita dapat memanggil method ini untuk mengganti kecepatan mobil tersebut, seperti yang terlihat pada contoh berikut:
 
+    ```    
     void main() {
         Mobil mobilSaya = Mobil('Merah', 100);
   
@@ -35,4 +38,4 @@
         mobilSaya.ubahKecepatan(120);
         print('Kecepatan mobil saya setelah diubah: ${mobilSaya.kecepatan}');
     }
-
+    ```
