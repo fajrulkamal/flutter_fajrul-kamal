@@ -69,11 +69,11 @@ void main() {
   print('Hasil Penjumlahan: $hasilTambah');
 
   // Membuat objek Student
-  Student student = Student('John', 'Kelas A');
+  Student student = Student('Fajrul', 'Kelas D');
 
   // Membuat beberapa Course
-  Course course1 = Course('Matematika', 'Pengenalan dasar matematika');
-  Course course2 = Course('Bahasa Inggris', 'Kursus bahasa Inggris');
+  Course course1 = Course('Pemrograman berorientasi objek', 'Inheritance dan Polymorphism');
+  Course course2 = Course('Flutter', 'Pengenalan Flutter Widget');
 
   // Menambahkan Course ke Student
   student.tambahCourse(course1);

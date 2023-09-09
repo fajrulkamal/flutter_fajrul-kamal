@@ -2,14 +2,14 @@
 // Soal Prioritas 1
 
 class Hewan {
-  double berat; // Property berat untuk menyimpan berat badan hewan
+  double berat;
 
   Hewan(this.berat);
 }
 
 class Mobil {
-  double kapasitas; // Property kapasitas untuk total berat maksimum muatan
-  List<Hewan> muatan = []; // Property muatan untuk list data hewan yang menjadi muatan
+  double kapasitas; 
+  List<Hewan> muatan = []; 
 
   Mobil(this.kapasitas);
 

@@ -66,5 +66,7 @@ class Matematika implements KelipatanPersekutuanTerkecil, FaktorPersekutuanTerbe
 
 void main() {
   Matematika operation = Matematika(12, 18);
-  print('Hasil: ${operation.hasil()}');
+  int x = operation.x;
+  int y = operation.y;
+  print('Hasil KPK antara $x dan $y adalah: ${operation.hasil()}');
 }
