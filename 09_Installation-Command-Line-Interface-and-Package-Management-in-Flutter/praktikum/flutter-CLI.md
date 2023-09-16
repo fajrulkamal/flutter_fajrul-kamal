@@ -1,0 +1,1 @@
+Pengumpulan berupa screenshoot pada folder screenshoot.
