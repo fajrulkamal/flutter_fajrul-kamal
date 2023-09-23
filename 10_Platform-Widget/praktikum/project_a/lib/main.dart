@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kamal/model/data_kontak.dart'; // Sesuaikan dengan nama paket Anda
+import 'package:project_a/model/data_kontak.dart'; // Sesuaikan dengan nama paket Anda
 
 void main() {
   runApp(const HelloWorld());
