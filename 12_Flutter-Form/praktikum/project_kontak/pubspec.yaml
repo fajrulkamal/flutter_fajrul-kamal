@@ -33,6 +33,7 @@ dependencies:
   rflutter_alert: ^2.0.4
   flutter_colorpicker: ^1.0.3
   file_picker: ^4.6.1
+  uuid: ^3.0.7
   open_file: ^3.2.1
   intl: ^0.18.0
 

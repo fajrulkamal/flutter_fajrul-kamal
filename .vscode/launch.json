@@ -1,0 +1,128 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "fajrul",
+            "cwd": "fajrul",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "fajrul (profile mode)",
+            "cwd": "fajrul",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "fajrul (release mode)",
+            "cwd": "fajrul",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "kamal",
+            "cwd": "kamal",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "kamal (profile mode)",
+            "cwd": "kamal",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "kamal (release mode)",
+            "cwd": "kamal",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "project_a",
+            "cwd": "10_Platform-Widget\\praktikum\\project_a",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "project_a (profile mode)",
+            "cwd": "10_Platform-Widget\\praktikum\\project_a",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "project_a (release mode)",
+            "cwd": "10_Platform-Widget\\praktikum\\project_a",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "project_a",
+            "cwd": "11_Flutter-Layout\\praktikum\\project_a",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "project_a (profile mode)",
+            "cwd": "11_Flutter-Layout\\praktikum\\project_a",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "project_a (release mode)",
+            "cwd": "11_Flutter-Layout\\praktikum\\project_a",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "project_kontak",
+            "cwd": "12_Flutter-Form\\praktikum\\project_kontak",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "project_kontak (profile mode)",
+            "cwd": "12_Flutter-Form\\praktikum\\project_kontak",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "project_kontak (release mode)",
+            "cwd": "12_Flutter-Form\\praktikum\\project_kontak",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "project_kontak",
+            "cwd": "13_Advance-Form-Flutter\\praktikum\\praktikum\\project_kontak",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "project_kontak (profile mode)",
+            "cwd": "13_Advance-Form-Flutter\\praktikum\\praktikum\\project_kontak",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "project_kontak (release mode)",
+            "cwd": "13_Advance-Form-Flutter\\praktikum\\praktikum\\project_kontak",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
