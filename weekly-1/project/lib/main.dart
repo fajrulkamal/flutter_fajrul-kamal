@@ -29,7 +29,7 @@ class _MyHomePageState extends State<MyHomePage> {
   TextEditingController _messageController = TextEditingController();
 
   void _submitForm(String firstName, String lastName, String email, String message) {
-    final formData = 'First Name: $firstName\nLast Name: $lastName\nEmail: $email\nMessage: $message';
+    final formData = 'Nama lengkap: $firstName $lastName \nEmail: $email\nPesan: $message';
     setState(() {
       _formData.add(formData);
     });
@@ -99,60 +99,78 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _buildWelcome() {
     return Container(
       key: ValueKey<String>('Welcome'),
-      padding: EdgeInsets.all(16),
+      padding: EdgeInsets.only(top: 320, left: 32, right: 48),
       child: Center(
-        child: Column(
-          children: [
-            Text(
-              'Selamat Datang',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
-            Text(
-              'Flutter App',
-              style: TextStyle(fontSize: 18),
-            ),
-          ],
+        child: Align(
+          alignment: Alignment.center,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Selamat Datang',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.left,
+              ),
+              Text(
+                'Apakah kamu membutuhkan jasa konsultasi program Artificial Intelligence? Hubungi kami dengan mengisi dormulir di bawah',
+                style: TextStyle(fontSize: 14),
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 
+
+
   Widget _buildForm() {
     return Container(
       key: ValueKey<String>('Form'),
-      padding: EdgeInsets.all(16),
+      padding: EdgeInsets.only(top: 48, left: 16, right: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(
-            'Formulir',
+            'Formulir pendaftaran',
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 16),
-          TextFormField(
-            controller: _firstNameController, // Tambahkan controller
-            decoration: InputDecoration(labelText: 'Nama Depan'),
-            onChanged: (value) {},
+          Row(
+            children: [
+              Expanded(
+                child: TextFormField(
+                  controller: _firstNameController,
+                  decoration: InputDecoration(labelText: 'Nama Depan'),
+                  onChanged: (value) {},
+                ),
+              ),
+              SizedBox(width: 16),
+              Expanded(
+                child: TextFormField(
+                  controller: _lastNameController,
+                  decoration: InputDecoration(labelText: 'Nama Belakang'),
+                  onChanged: (value) {},
+                ),
+              ),
+            ],
           ),
           TextFormField(
-            controller: _lastNameController, // Tambahkan controller
-            decoration: InputDecoration(labelText: 'Nama Belakang'),
-            onChanged: (value) {},
-          ),
-          TextFormField(
-            controller: _emailController, // Tambahkan controller
+            controller: _emailController,
             decoration: InputDecoration(labelText: 'Alamat Email'),
             onChanged: (value) {},
           ),
           TextFormField(
-            controller: _messageController, // Tambahkan controller
-            decoration: InputDecoration(labelText: 'Pesan'),
+            controller: _messageController,
+            decoration: InputDecoration(
+              labelText: 'Pesan',
+            ),
+            maxLines: 3, // Set maxLines menjadi 3
             onChanged: (value) {},
           ),
           SizedBox(height: 16),
           ElevatedButton(
             onPressed: () {
-              // Ambil data dari form dan panggil _submitForm
               final firstName = _firstNameController.text;
               final lastName = _lastNameController.text;
               final email = _emailController.text;
@@ -162,7 +180,8 @@ class _MyHomePageState extends State<MyHomePage> {
             },
             child: Text('Submit'),
             style: ButtonStyle(
-              backgroundColor:MaterialStateProperty.all<Color>(Color(0xff044B7F))),
+              backgroundColor: MaterialStateProperty.all<Color>(Color(0xff044B7F)),
+            ),
           ),
           SizedBox(height: 16),
           Text(
