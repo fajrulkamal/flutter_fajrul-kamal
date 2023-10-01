@@ -7,7 +7,6 @@
 2. Navigation Dasar dalam Pengembangan Aplikasi Flutter
 
    Ada beberapa konsep dasar yang perlu diketahui dalam pengembangan aplikasi Flutter terkait navigasi:
-
     - Routes: Routes adalah representasi dari setiap layar atau halaman dalam aplikasi Flutter. Setiap route memiliki nama yang unik.
     - Navigator: Navigator adalah widget yang digunakan untuk mengelola tumpukan (stack) navigasi dalam aplikasi. Ini memungkinkan untuk melakukan perpindahan antara route-route yang berbeda.
     - Push dan Pop: Untuk berpindah dari satu halaman ke halaman lain, dapat dilakukan menggunakan metode `Navigator.push()` untuk menambahkan route baru ke dalam tumpukan navigasi, dan `Navigator.pop()` untuk menghapus route dari tumpukan ketika pengguna ingin kembali ke halaman sebelumnya.
