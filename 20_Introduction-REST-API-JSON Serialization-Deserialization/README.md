@@ -6,11 +6,32 @@
 
 2. HTTP
 
-    HTTP (Hypertext Transfer Protocol) adalah protokol yang digunakan untuk mengirimkan data melalui internet. Ini adalah dasar dari komunikasi web yang memungkinkan aplikasi web dan mobile untuk mengirimkan permintaan ke server dan menerima respons dari server. Sebagai contoh, ketika membuka halaman web atau mengirim pesan di media sosial, HTTP digunakan untuk berkomunikasi dengan server yang menyediakan konten atau layanan tersebut.
+    HTTP dalam Flutter adalah protokol yang digunakan untuk mengirim dan menerima data antara aplikasi Flutter dan server melalui jaringan. Ini merupakan salah satu cara paling umum untuk berkomunikasi dengan server dalam pengembangan aplikasi Flutter. Dengan HTTP, Anda dapat mengirimkan permintaan (request) ke server dan menerima respons (response) dari server, yang dapat berisi data dalam berbagai format, seperti JSON, XML, HTML, dan lainnya.
 
+    Contoh penggunaan HTTP dalam Flutter untuk mengirimkan data ke server (biasanya dengan metode POST) adalah sebagai berikut:
+
+    ```
+    import 'package:http/http.dart' as http;
+
+        void sendDataToServer() async {
+            var url = Uri.parse('https://contoh.com/api/post-data');
+            var response = await http.post(url, body: {
+                'key1': 'value1',
+                'key2': 'value2',
+            });
+
+            if (response.statusCode == 200) {
+                // Data berhasil terkirim, lakukan sesuatu dengan respons dari server jika perlu.
+            } else {
+                // Tangani kesalahan jika ada.
+            }
+        }
+    ```
+    
 3. Dio?
 
     Dio adalah paket Flutter yang berguna untuk melakukan permintaan HTTP dengan cara yang lebih efisien dan mudah dibaca. Dio memfasilitasi pengiriman permintaan HTTP seperti GET, POST, PUT, dan DELETE serta pengelolaan respons. Sebagai contoh penggunaan Dio dalam Flutter:
+
     ```
     import 'package:dio/dio.dart';
 
