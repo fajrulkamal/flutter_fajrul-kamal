@@ -16,6 +16,10 @@ class ContactProvider with ChangeNotifier {
     final prefs = await SharedPreferences.getInstance();
     final contactsData = prefs.getStringList('contacts') ?? [];
     _contacts = contactsData.map((e) => Contact.fromMap(jsonDecode(e))).toList();
+    
+    // Print the loaded contacts
+    print(_contacts);
+
     notifyListeners();
   }
 
@@ -42,6 +46,7 @@ class ContactProvider with ChangeNotifier {
 
   void deleteContact(String id) {
     _contacts.removeWhere((contact) => contact.id == id);
+    _saveContacts();
     notifyListeners();
   }
 }
