@@ -3,33 +3,32 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class ImageGenerated extends StatefulWidget {
-  const ImageGenerated({super.key});
+class InitialAvatarGenerator extends StatefulWidget {
+  const InitialAvatarGenerator({super.key});
 
   @override
-  State<ImageGenerated> createState() => _ImageGeneratedState();
+  _InitialAvatarGeneratorState createState() => _InitialAvatarGeneratorState();
 }
 
-class _ImageGeneratedState extends State<ImageGenerated> {
+class _InitialAvatarGeneratorState extends State<InitialAvatarGenerator> {
   final _formKey = GlobalKey<FormState>();
-  String _name = '';
-  String _avatarUrl = '';
+  String _inputName = '';
+  String _avatarLink = '';
 
   @override
   void dispose() {
     super.dispose();
   }
 
-  void _generateAvatar() async {
+  void _generateAvatarFromName() async {
     if (_formKey.currentState!.validate()) {
       final response = await Dio().get(
-          'https://api.dicebear.com/6.x/initials/svg?seed=$_name',
+          'https://api.dicebear.com/6.x/initials/svg?seed=$_inputName',
       options: Options(headers: {'User-Agent': 'Mozilla/5.0'}));
 
       setState(() {
-        _avatarUrl = response.requestOptions.uri.toString();
+        _avatarLink = response.requestOptions.uri.toString();
       });
-
     }
   }
 
@@ -37,8 +36,8 @@ class _ImageGeneratedState extends State<ImageGenerated> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Initial Generator"),
-        backgroundColor: Colors.deepPurple,
+        title: const Text("Generate Avatar from Initials"),
+        backgroundColor: Colors.teal,
         centerTitle: true,
       ),
       backgroundColor: const Color.fromARGB(99, 233, 233, 233),
@@ -56,8 +55,8 @@ class _ImageGeneratedState extends State<ImageGenerated> {
               SizedBox(
                 height: 200,
                 width: 200,
-                child: _avatarUrl.isNotEmpty ? SvgPicture.network(
-                    _avatarUrl,
+                child: _avatarLink.isNotEmpty ? SvgPicture.network(
+                    _avatarLink,
                     height: 200,
                     width: 200,
                   ) : const Placeholder(),
@@ -68,25 +67,25 @@ class _ImageGeneratedState extends State<ImageGenerated> {
                 child: TextFormField(
                   decoration: const InputDecoration(
                     enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.deepPurple),
+                      borderSide: BorderSide(color: Colors.teal),
                     ),
                     focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.deepPurple),
+                      borderSide: BorderSide(color: Colors.teal),
                     ),
-                    prefixIcon: Icon(Icons.person, color: Colors.deepPurple),
-                    labelText: 'Name',
+                    prefixIcon: Icon(Icons.person, color: Colors.teal),
+                    labelText: 'Enter Name',
                     hintText: 'Enter your name',
                     border: OutlineInputBorder(),
                   ),
                   validator: (value) {
                     if (value == null || value.isEmpty) {
-                      return 'Please enter your name';
+                      return 'Please enter a name';
                     }
                     return null;
                   },
                   onChanged: (value) {
                     setState(() {
-                      _name = value;
+                      _inputName = value;
                     });
                   },
                 ),
@@ -96,9 +95,9 @@ class _ImageGeneratedState extends State<ImageGenerated> {
                 width: 200,
                 height: 50,
                 child: ElevatedButton(
-                  onPressed: _generateAvatar,
+                  onPressed: _generateAvatarFromName,
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.deepPurple,
+                    primary: Colors.teal,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(50),
                     ),

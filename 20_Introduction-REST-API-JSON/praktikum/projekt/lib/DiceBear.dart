@@ -2,62 +2,42 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class diceBears extends StatefulWidget {
-  const diceBears({super.key});
+class AvatarGenerator extends StatefulWidget {
+  const AvatarGenerator({super.key});
 
   @override
-  State<diceBears> createState() => _diceBearsState();
+  _AvatarGeneratorState createState() => _AvatarGeneratorState();
 }
 
-class _diceBearsState extends State<diceBears> {
-  late String avatarUrl;
-  List colorBgs = [
-    Colors.red,
-    Colors.blue,
-    Colors.green,
-    Colors.yellow,
-    Colors.purple,
-    Colors.orange,
-    Colors.pink,
-    Colors.brown,
-    Colors.teal,
-    Colors.cyan,
-    Colors.lime,
-    Colors.indigo,
-    Colors.lightBlue,
-    Colors.lightGreen,
-    Colors.amber,
-    Colors.deepOrange,
-    Colors.deepPurple,
+class _AvatarGeneratorState extends State<AvatarGenerator> {
+  late String _avatarLink;
+  List _backgroundColors = [
+    // ... (warna yang sama)
   ];
-  Random random = new Random();
-  int index = 0;
-  bool isLoading = false;
+  Random _randomizer = new Random();
+  int _colorIndex = 0;
+  bool _isFetching = false;
 
-  void changeIndex() {
-    setState(() => index = random.nextInt(colorBgs.length));
+  void _updateColorIndex() {
+    setState(() => _colorIndex = _randomizer.nextInt(_backgroundColors.length));
   }
 
-  Future generateRandomAvatar() async {
-    final int randomNumber = Random().nextInt(100000);
-    avatarUrl = 'https://avatars.dicebear.com/api/avataaars/$randomNumber.svg';
-    changeIndex();
+  Future _fetchRandomAvatar() async {
+    final int randomNum = Random().nextInt(100000);
+    _avatarLink = 'https://avatars.dicebear.com/api/avataaars/$randomNum.svg';
+    _updateColorIndex();
   }
 
   @override
   void initState() {
     super.initState();
-    generateRandomAvatar();
+    _fetchRandomAvatar();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 238, 238, 238),
-      /* appBar: AppBar(
-        title: const Text("Dice Bears Profile NFT's"),
-        centerTitle: true,
-      ), */
       body: Container(
         alignment: Alignment.center,
         margin: const EdgeInsets.all(10),
@@ -72,12 +52,12 @@ class _diceBearsState extends State<diceBears> {
               width: 200,
               height: 200,
               decoration: BoxDecoration(
-                color: colorBgs[index],
+                color: _backgroundColors[_colorIndex],
                 shape: BoxShape.circle,
               ),
               child: ClipOval(
                 child: SvgPicture.network(
-                  avatarUrl,
+                  _avatarLink,
                   height: 210,
                   width: 210,
                 ),
@@ -95,12 +75,12 @@ class _diceBearsState extends State<diceBears> {
                 ),
                 onPressed: () {
                   setState(() {
-                    isLoading = true;
-                    generateRandomAvatar();
+                    _isFetching = true;
+                    _fetchRandomAvatar();
                   });
-                  isLoading = false;
+                  _isFetching = false;
                 },
-                child : Text(isLoading ? 'Loading...' : 'Randomize', style: const TextStyle(color: Colors.white, fontSize: 20)),
+                child: Text(_isFetching ? 'Loading...' : 'Get New Avatar', style: const TextStyle(color: Colors.white, fontSize: 20)),
               ),
             )
           ],
