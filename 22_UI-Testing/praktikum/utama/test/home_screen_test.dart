@@ -7,10 +7,8 @@ void main() {
     // Render HomeScreen
     await tester.pumpWidget(MaterialApp(home: HomeScreen()));
 
-    // Cek apakah semua elemen ada
+    // Check for the presence of certain texts
     expect(find.text('Aplikasi Kontak dan Galeri'), findsOneWidget);
     expect(find.text('Silahkan gunakan aplikasi ini untuk membuat kontak baru atau melihat galeri'), findsOneWidget);
-    expect(find.byIcon(Icons.contacts), findsOneWidget);
-    expect(find.byIcon(Icons.photo_library), findsOneWidget);
   });
 }

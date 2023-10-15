@@ -7,8 +7,8 @@ void main() {
     // Render GalleryScreen
     await tester.pumpWidget(MaterialApp(home: GalleryScreen()));
 
-    // Cek apakah semua elemen ada
+    // Check for the presence of certain widgets and texts
     expect(find.text('Gallery'), findsOneWidget);
-    expect(find.byType(GestureDetector), findsWidgets); // Cek apakah ada beberapa gambar
+    expect(find.byType(GestureDetector), findsWidgets); // Check for the presence of one or more GestureDetector widgets
   });
 }

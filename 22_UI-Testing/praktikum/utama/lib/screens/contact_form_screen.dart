@@ -145,7 +145,6 @@ class _ContactFormScreenState extends State<ContactFormScreen> {
       }
   }
 
-
   void _openGallery() async {
     final selectedImagePath = await Navigator.push(
       context,
