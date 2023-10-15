@@ -11,9 +11,7 @@ class AvatarGenerator extends StatefulWidget {
 
 class _AvatarGeneratorState extends State<AvatarGenerator> {
   late String _avatarLink;
-  List _backgroundColors = [
-    // ... (warna yang sama)
-  ];
+  List<Color> _backgroundColors = []; // Empty list for now, but you can add colors if needed.
   Random _randomizer = new Random();
   int _colorIndex = 0;
   bool _isFetching = false;
@@ -36,6 +34,8 @@ class _AvatarGeneratorState extends State<AvatarGenerator> {
 
   @override
   Widget build(BuildContext context) {
+    Color bgColor = _backgroundColors.isNotEmpty ? _backgroundColors[_colorIndex % _backgroundColors.length] : Colors.grey;
+
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 238, 238, 238),
       body: Container(
@@ -52,7 +52,7 @@ class _AvatarGeneratorState extends State<AvatarGenerator> {
               width: 200,
               height: 200,
               decoration: BoxDecoration(
-                color: _backgroundColors[_colorIndex],
+                color: bgColor,
                 shape: BoxShape.circle,
               ),
               child: ClipOval(

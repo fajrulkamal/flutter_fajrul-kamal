@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'DiceBear.dart'; // Pastikan nama file DiceBear.dart sesuai
-import 'imageGenerate.dart'; // Pastikan nama file imageGenerate.dart sesuai
+import 'DiceBear.dart'; // Ensure the filename DiceBear.dart is correct
+import 'imageGenerate.dart'; // Ensure the filename imageGenerate.dart is correct
 
 void main() {
   runApp(const MyApp());
