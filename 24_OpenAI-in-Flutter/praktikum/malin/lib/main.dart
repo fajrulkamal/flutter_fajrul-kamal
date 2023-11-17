@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'config.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -25,7 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
   String selectedLanguage = "en";
 
   Future<void> generateStory() async {
-    final apiKey = "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";
+    final apiKey = Config.apiKey;
     final endpoint = "https://api.openai.com/v1/engines/davinci-codex/completions";
 
     final prompt = "Tell a Malin Kundang story in $selectedLanguage";
