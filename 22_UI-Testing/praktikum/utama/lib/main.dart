@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'screens/contact_provider.dart';
-import 'screens/contact_list_screen.dart';
+import 'package:flutter/material.dart'; // Material
+import 'package:provider/provider.dart'; // Package Provider 
+import 'screens/contact_provider.dart'; // Import ContactProvider
+import 'screens/contact_list_screen.dart'; // Import the ContactListScreen
 import 'screens/home_screen.dart'; // Import the HomeScreen
 import 'screens/gallery_screen.dart'; // Import the GalleryScreen
 
