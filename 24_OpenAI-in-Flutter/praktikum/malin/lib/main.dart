@@ -28,10 +28,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> generateStory() async {
     final apiKey = Config.apiKey;
-    final endpoint = "https://api.openai.com/v1/engines/davinci-codex/completions";
+    final endpoint = "https://api.openai.com/v1/chat/completions";
 
-    final prompt = "Tell a Malin Kundang story in $selectedLanguage";
-
+    final prompt = "Tell a simplified Malin Kundang story in $selectedLanguage";
+    const model = "gpt-3.5-turbo";
+    
     final response = await http.post(
       Uri.parse(endpoint),
       headers: {
@@ -39,19 +40,20 @@ class _MyHomePageState extends State<MyHomePage> {
         "Authorization": "Bearer $apiKey",
       },
       body: jsonEncode({
-        "prompt": prompt,
-        "max_tokens": 150,
-        "target_language": selectedLanguage,
+        "messages" : [{"role": 'user', "content": prompt}],
+        "model": model,
+        "max_tokens": 1024,
       }),
     );
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
-      setState(() {
-        generatedStory = data['choices'][0]['text'];
+    setState(() {
+      generatedStory = data['choices'][0]['message']['content'];  // Update the path to the generated text
       });
     } else {
       print("Error: ${response.statusCode}");
+      print("Error Message: ${response.body}");
     }
   }
 
